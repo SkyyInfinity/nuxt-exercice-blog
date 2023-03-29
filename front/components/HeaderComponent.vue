@@ -3,7 +3,9 @@
         <div class="container flex justify-between gap-4">
             <h1 class="font-bold text-2xl">{{ title }}</h1>
             <ul class="flex gap-2">
-                <li>Lien</li>
+                <li>
+                    <NuxtLink to="/">Accueil</NuxtLink>
+                </li>
                 <li>Lien</li>
                 <li>Lien</li>
                 <li>Lien</li>

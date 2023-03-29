@@ -1,7 +1,7 @@
 <template>
     <div class="posts">
         <ul class="posts-list grid gap-8 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1">
-            <li v-for="post in posts" :key="post.id" class="post bg-white rounded-lg overflow-hidden border border-slate-200 hover:scale-[1.02] transition will-change-transform">
+            <li v-for="post in posts" :key="post.id" class="post bg-white rounded-lg overflow-hidden border border-slate-200 hover:scale-[1.02] transition">
                 <NuxtLink :to="`/posts/${post.id}`">
                     <div class="post-thumbs w-full h-[200px]">
                         <img class="w-full h-full object-cover" src="https://placehold.co/600x300" alt="Placeholder image" loading="lazy">
