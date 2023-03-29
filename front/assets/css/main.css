@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .page {
+        @apply py-16;
+    }
+    .container {
+        @apply mx-auto px-4;
+    }
+}
+
+body {
+    background-color: #f7f8f9;
+}
+.text-ellipsis-multiline {
+    --line-count: 3;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box !important;
+    -webkit-line-clamp: var(--line-count);
+    -webkit-box-orient: vertical;
+    white-space: normal;
+}
