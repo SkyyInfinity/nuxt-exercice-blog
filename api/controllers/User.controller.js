@@ -5,6 +5,10 @@ function hashPassword(plaintextPassword) {
     return bcrypt.hashSync(plaintextPassword, 10);
 }
 
+function comparePassword(plaintextPassword, hash) {
+    return bcrypt.compareSync(plaintextPassword, hash);
+}
+
 exports.create = async function (req, res) {
 	const users = new User({
 		firstName: req.body.firstName,
