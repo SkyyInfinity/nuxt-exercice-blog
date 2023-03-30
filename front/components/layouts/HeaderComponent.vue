@@ -1,14 +1,16 @@
 <template>
     <header class="py-4 bg-white border-b border-slate-200">
         <div class="container flex justify-between gap-4">
-            <h1 class="font-bold text-2xl">{{ title }}</h1>
-            <ul class="flex gap-2">
+            <h1 class="font-bold text-2xl">Logo</h1>
+            <ul class="flex items-center gap-2">
                 <li>
                     <NuxtLink to="/">Accueil</NuxtLink>
                 </li>
-                <li>Lien</li>
-                <li>Lien</li>
-                <li>Lien</li>
+            </ul>
+            <ul class="flex items-center gap-2">
+                <li>
+                    <ButtonComponent to="/login">Connexion</ButtonComponent>
+                </li>
             </ul>
         </div>
     </header>
@@ -18,11 +20,6 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-    name: 'HeaderComponent',
-    data() {
-        return {
-            title: 'Header',
-        }
-    },
+    name: 'HeaderComponent'
 })
 </script>

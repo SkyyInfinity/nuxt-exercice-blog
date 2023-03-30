@@ -1,7 +1,8 @@
 <template>
-    <div class="app">
+    <div class="app flex flex-col min-h-screen">
         <HeaderComponent />
         <Nuxt />
+        <FooterComponent/>
     </div>
 </template>
 

@@ -7,10 +7,7 @@ export default {
         },
         meta: [
             { charset: 'utf-8' },
-            {
-                name: 'viewport',
-                content: 'width=device-width, initial-scale=1',
-            },
+            { name: 'viewport', content: 'width=device-width, initial-scale=1' },
             { hid: 'description', name: 'description', content: '' },
             { name: 'format-detection', content: 'telephone=no' },
         ],
@@ -18,18 +15,18 @@ export default {
     },
 
     // Global CSS: https://go.nuxtjs.dev/config-css
-    css: [
-        '~/assets/css/main.css'
-    ],
+    css: ['~/assets/css/main.css'],
 
     // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-    plugins: [
-        '~/plugins/interceptor.js',
-        '~/plugins/service.js',
-    ],
+    plugins: ['~/plugins/interceptor.js', '~/plugins/service.js'],
 
     // Auto import components: https://go.nuxtjs.dev/config-components
-    components: true,
+    components: [
+        '~/components',
+        '~/components/layouts',
+        '~/components/form',
+        '~/components/post',
+    ],
 
     // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
     buildModules: [
@@ -38,13 +35,13 @@ export default {
         '@nuxt/typescript-build',
         // https://go.nuxtjs.dev/tailwindcss
         '@nuxtjs/tailwindcss',
-        'nuxt-gsap-module'
+        'nuxt-gsap-module',
     ],
 
     // Modules: https://go.nuxtjs.dev/config-modules
     modules: [
         // https://go.nuxtjs.dev/axios
-        '@nuxtjs/axios'
+        '@nuxtjs/axios',
     ],
 
     // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -52,10 +49,10 @@ export default {
         // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
         proxy: true,
         host: 'localhost',
-        prefix: '/api/'
+        prefix: '/api/',
     },
     proxy: {
-        '/api/': process.env.NUXT_ENV_API_URL
+        '/api/': process.env.NUXT_ENV_API_URL,
     },
 
     // Build Configuration: https://go.nuxtjs.dev/config-build

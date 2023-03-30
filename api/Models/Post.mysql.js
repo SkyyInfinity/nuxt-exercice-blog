@@ -18,7 +18,7 @@ Post.create = (newPost, result) => {
 }
 
 Post.getAll = (result) => {
-    sql.query('SELECT * FROM post', (err,res) => {
+    sql.query('SELECT * FROM post ORDER BY date DESC', (err,res) => {
         if(err){
             result(err,null);
             return;

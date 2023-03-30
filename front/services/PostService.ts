@@ -14,4 +14,8 @@ export default class PostService {
     async find(id: number) {
         return await this.axios.get(`${this.apiUrl}/posts/${id}`).then((res: any) => res.data);
     }
+
+    async create(post: any) {
+        return await this.axios.post(`${this.apiUrl}/posts/create`, post).then((res: any) => res);
+    }
 }
